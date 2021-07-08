@@ -1,56 +1,84 @@
 // Código del cuadrado
+let perimetroCuadrado = lado => lado * 4
 
-console.group('Cuadrados')
-const ladoCuadrado = 5
-console.log(`Los lados del cuadrado miden: ${ladoCuadrado}cm`)
-
-const perimetroCuadrado = ladoCuadrado * 4
-console.log(`El perímetro del cuadrado mide: ${perimetroCuadrado}cm`)
-
-const areaCuadrado = ladoCuadrado * ladoCuadrado
-console.log(`El área del cuadrado mide: ${areaCuadrado}cm²`)
-console.groupEnd()
+let areaCuadrado = lado => lado * lado
 
 // Código del triangulo
+let perimetroTriangulo = (lado1, lado2, base) => lado1 + lado2 + base
 
-console.group('Triángulos')
-const ladoTriangulo1 = 6
-const ladoTriangulo2 = 6
-const baseTriangulo = 4
-console.log(`Los lados del triángulo miden: ${ladoTriangulo1}cm, ${ladoTriangulo2}cm, ${baseTriangulo}cm`)
-
-const alturaTriangulo = 5.5
-console.log(`La altura del triángulo mide: ${alturaTriangulo}cm`)
-
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo
-console.log(`El perímetro del triángulo mide: ${perimetroTriangulo}cm`)
-
-const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2
-console.log(`El área del triángulo mide: ${areaTriangulo}cm²`)
-
-console.groupEnd()
+let areaTriangulo = (base, altura) => (base * altura) / 2
 
 // Código del circulo
-
-console.group('Circulos')
-const radioCirculo = 4
-console.log(`El radio del círculo mide: ${radioCirculo}cm`)
-
-const diametroCirculo = radioCirculo * 2
-console.log(`El diámetro del círculo mide: ${diametroCirculo}cm`)
+let diametroCirculo = radio => radio * 2
 
 const pi = Math.PI
-const piDosDecimales = pi.toFixed(4)
-console.log(`El π del círculo mide: ${piDosDecimales}cm`)
+const piCuatroDecimales = pi.toFixed(4)
 
-const perimetroCirculo = diametroCirculo * pi
-const perimetroCirculoDosDecimales = perimetroCirculo.toFixed(2)
-console.log(`El perímetro del círculo mide: ${perimetroCirculoDosDecimales}cm`)
+let perimetroCirculo = radio => {
+    let diametro = diametroCirculo(radio)
+    return diametro * piCuatroDecimales
+}
 
-const areaCirculo = (radioCirculo * radioCirculo) * pi
-const areaCirculoDosDecimales = areaCirculo.toFixed(2)
-console.log(`El área del círculo mide: ${areaCirculoDosDecimales}cm`)
+let areaCirculo = radio => (radio * radio) * piCuatroDecimales
 
+// Aqui interactuamos con HTML
 
+//Cuadrado
+calcularPerimetroCuadrado = () => {
+    const input = document.getElementById('inputCuadrado')
+    const value = input.value
+    const perimetro = perimetroCuadrado(value)
+    alert(perimetro)
+}
 
-console.groupEnd()
+calcularAreaCuadrado = () => {
+    const input = document.getElementById('inputCuadrado')
+    const value = input.value
+    const area = areaCuadrado(value)
+    alert(area)
+}
+
+//Triangulo
+calcularPerimetroTriangulo = () => {
+    const input_1 = document.getElementById('inputTriangulo1')
+    const value_1 = parseInt(input_1.value)
+    const input_2 = document.getElementById('inputTriangulo2')
+    const value_2 = parseInt(input_2.value)
+    const input_base = document.getElementById('inputTrianguloBase')
+    const value_base = parseInt(input_base.value)
+
+    const perimetro = perimetroTriangulo(value_1, value_2, value_base)
+    alert(perimetro)
+}
+
+calcularAreaTriangulo = () => {
+    const input_base = document.getElementById('inputTrianguloBase')
+    const value_base = parseInt(input_base.value)
+    const input_altura = document.getElementById('inputTrianguloAltura')
+    const value_altura = parseInt(input_altura.value)
+
+    const area = areaTriangulo(value_base, value_altura)
+    alert(area)
+}
+
+//Circulo
+calcularDiametroCirculo = () => {
+    const input = document.getElementById('inputCirculo')
+    const value = input.value
+    const perimetro = diametroCirculo(value)
+    alert(perimetro)
+}
+
+calcularPerimetroCirculo = () => {
+    const input = document.getElementById('inputCirculo')
+    const value = input.value
+    const perimetro = perimetroCirculo(value)
+    alert(perimetro)
+}
+
+calcularAreaCirculo = () => {
+    const input = document.getElementById('inputCirculo')
+    const value = input.value
+    const area = areaCirculo(value)
+    alert(area)
+}

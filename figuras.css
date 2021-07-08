@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 1rem 0;
+}
+
+.seccion-1 {
+    height: 12rem;
+}
+
+.seccion-2 {
+    height: 29rem;
+}
+
+.seccion-3 {
+    height: 18rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem 0;
+}
+
+input {
+    margin: .5rem 0;
+}
+
+button {
+    margin: .5rem 0;
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+label {
+    font-size: 1.4rem;
+}
