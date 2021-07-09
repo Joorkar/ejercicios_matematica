@@ -4,9 +4,16 @@ let perimetroCuadrado = lado => lado * 4
 let areaCuadrado = lado => lado * lado
 
 // Código del triangulo
-let perimetroTriangulo = (lado1, lado2, base) => lado1 + lado2 + base
 
 let areaTriangulo = (base, altura) => (base * altura) / 2
+
+let altura_PerimetroTriangulo = (lado1, lado2, base) => {
+    if (lado1 === lado2) {
+        return Math.sqrt(lado1 * lado1 - ((lado2 * lado2)/4))
+    } else {
+        return lado1 + lado2 + base
+    }
+}
 
 // Código del circulo
 let diametroCirculo = radio => radio * 2
@@ -47,7 +54,7 @@ calcularPerimetroTriangulo = () => {
     const input_base = document.getElementById('inputTrianguloBase')
     const value_base = parseInt(input_base.value)
 
-    const perimetro = perimetroTriangulo(value_1, value_2, value_base)
+    const perimetro = altura_PerimetroTriangulo(value_1, value_2, value_base)
     alert(perimetro)
 }
 
@@ -59,6 +66,18 @@ calcularAreaTriangulo = () => {
 
     const area = areaTriangulo(value_base, value_altura)
     alert(area)
+}
+
+calcularAlturaTriangulo = () => {
+    const input_1 = document.getElementById('inputTriangulo1')
+    const value_1 = parseInt(input_1.value)
+    const input_2 = document.getElementById('inputTriangulo2')
+    const value_2 = parseInt(input_2.value)
+    const input_base = document.getElementById('inputTrianguloBase')
+    const value_base = parseInt(input_base.value)
+
+    const altura = altura_PerimetroTriangulo(value_1, value_2, value_base).toFixed(2)
+    alert(altura)
 }
 
 //Circulo
