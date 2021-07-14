@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula IS é IC</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./tablet.css" media="(min-width: 700px)">
+</head>
+<body>
+    <main>
+        <article class="box">
+            <section class="box-content">
+                <div class="title">
+                    <h2>Conoce tu inversión</h2>
+                </div>
+                <form action="">
+                    <div class="group-container">
+                        <div class="gropu-left">
+                            <div class="label-input-container">
+                                <label for="amount">¿Cuanto es el monto de tu inversión?</label>
+                                <input type="number" name="amount" id="input-amount" class="input">
+                            </div>
+                            <div class="label-input-container">
+                                <label for="time">¿Cúal es el lapso de tiempo en años?</label>
+                                <input type="number" name="time" id="input-time" class="input">
+                            </div>
+                        </div>
+                        <div class="gropu-rigth">
+                            <div class="label-input-container">
+                                <label for="interest">¿Cúal es el interés anual? (en %)</label>
+                                <input type="text" name="interest" id="input-interest" class="input">
+                            </div>
+                            <div class="label-input-container">
+                                <label for="type-interest">¿Qué tipo de interes?</label>
+                                <select name="type-interest" id="type-interest" class="input">
+                                    <option value="simple">Simple</option>
+                                    <option value="compuesto">Compuesto</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="button button-calculate" onclick="mostrarMontoInversion()"> Calcular</button>
+                        <button type="button" class="button button-reset" onclick="reset()">Resetear</button>
+                    </div>
+                </form>
+                <div class="answer-container">
+                    <p class="answer-text" id="answer">Inversion Final</p>
+                </div>
+            </section>
+        </article>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>

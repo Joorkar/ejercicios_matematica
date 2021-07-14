@@ -1,0 +1,25 @@
+main .box {
+    max-width: 70rem;
+}
+
+.box-content .title {
+    min-width: 56rem;
+}
+
+form {
+    flex-flow: row wrap;
+}
+
+.group-container {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+}
+
+.button {
+    min-width: 27rem;
+    height: 4.5rem;
+}
+.answer-text {
+    line-height: 2.4rem;
+}
