@@ -61,7 +61,7 @@ mostrarMontoInversion = () => {
         if (tipoInteresValue === 'compuesto') {
             resultado = inversionConInteresCompuesto(montoValue, interesValue, tiempoValue)
             resultado = redondeoAlcentesimo(resultado)
-            textResultado.innerHTML = `Tu inversión con el capital inicial de ${montoValue} y el interes complejo anual de ${interesValue} durante ${tiempoValue} años sera de <span>${resultado}</span>.`
+            textResultado.innerHTML = `Tu inversión con el capital inicial de ${montoValue} y el interes complejo anual de ${interesValue}% durante ${tiempoValue} años sera de <span>${resultado}</span>.`
         }
     } else {
         textResultado.innerHTML = `Error ❗❗`
