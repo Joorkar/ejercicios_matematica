@@ -37,6 +37,7 @@ main .box {
     border: 4px solid black;
     border-radius: 30px;
     position: relative;
+    overflow: hidden;
 }
 
 main .box-content {
@@ -58,8 +59,6 @@ main .box-content {
     border-bottom: 2px solid black;
     background-color: var(--oscuro1);;
     color: var(--secundario);
-    border-top-left-radius: 22.5px;
-    border-top-right-radius: 22.5px;
     display: flex;
     justify-content: center;
     align-items: center;
